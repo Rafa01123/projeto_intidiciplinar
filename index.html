@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guia Git e GitHub - Simples e Direto</title>
+  <link rel="stylesheet" href="style.css">
+<body>
+
+<header>Guia Rápido: Git & GitHub</header>
+
+<nav>
+  <button onclick="showTab('git')" class="active">Git</button>
+  <button onclick="showTab('github')">GitHub</button>
+  <button onclick="showTab('diferencas')">Git x GitHub</button>
+  <button onclick="showTab('comandos')">Git Bash</button>
+  <button onclick="showTab('readme')">README.md</button>
+  <button onclick="showTab('repositorio')">Criar Repo</button>
+  <button onclick="showTab('clonar')">Clonar</button>
+  <button onclick="showTab('versao')">Commit</button>
+  <button onclick="showTab('enviar')">Push</button>
+</nav>
+
+<div class="content">
+
+  <div id="git" class="tab active">
+    <h2>O que é Git?</h2>
+    <p>Git é tipo uma máquina do tempo pro seu código. Ele guarda tudo que você altera e te deixa voltar no tempo se algo der ruim.</p>
+    <ul>
+      <li>Salva cada mudança feita.</li>
+      <li>Ajuda times a trabalharem juntos sem bagunça.</li>
+      <li>Permite voltar pra versões antigas.</li>
+    </ul>
+  </div>
+
+  <div id="github" class="tab">
+    <h2>O que é GitHub?</h2>
+    <p>Pense no GitHub como uma "nuvem" onde você guarda seus projetos do Git e ainda pode colaborar com a galera.</p>
+    <ul>
+      <li>Compartilha seu código com o mundo.</li>
+      <li>Permite colaboração (tipo redes sociais pra código).</li>
+      <li>Organiza tarefas, bugs e histórico.</li>
+    </ul>
+  </div>
+
+  <div id="diferencas" class="tab">
+    <h2>Diferença entre Git e GitHub</h2>
+    <ul>
+      <li><strong>Git:</strong> Programa que roda na sua máquina pra salvar o histórico do projeto.</li>
+      <li><strong>GitHub:</strong> Site onde você publica o que fez com o Git.</li>
+      <li>Dá pra usar Git sem GitHub, mas não o contrário.</li>
+    </ul>
+  </div>
+
+  <div id="comandos" class="tab">
+    <h2>Comandos básicos do Git Bash</h2>
+    <ul>
+      <li><code>ls</code> – Mostra os arquivos na pasta.</li>
+      <li><code>cd nome_da_pasta</code> – Entra em uma pasta.</li>
+      <li><code>mkdir nome</code> – Cria uma pasta nova.</li>
+      <li><code>touch arquivo.txt</code> – Cria um arquivo vazio.</li>
+      <li><code>clear</code> – Limpa o terminal.</li>
+    </ul>
+  </div>
+
+  <div id="readme" class="tab">
+    <h2>README.md – Exemplo com comandos</h2>
+    <pre><code>git init             # Inicia o Git no projeto
+git add .            # Adiciona tudo
+git commit -m "msg"  # Salva com uma mensagem
+git push origin main # Envia pro GitHub</code></pre>
+  </div>
+
+  <div id="repositorio" class="tab">
+    <h2>Como criar um repositório no GitHub</h2>
+    <ol>
+      <li>Vá em <a href="https://github.com" target="_blank">github.com</a> e faça login.</li>
+      <li>Clique em <strong>"New repository"</strong>.</li>
+      <li>Dê um nome e escolha se será público ou privado.</li>
+      <li>(Opcional) Marque para adicionar README.</li>
+      <li>Clique em <strong>"Create repository"</strong>.</li>
+    </ol>
+  </div>
+
+  <div id="clonar" class="tab">
+    <h2>Clonar um repositório</h2>
+    <p>No terminal, digite:</p>
+    <pre><code>git clone https://github.com/seu_usuario/seu_repositorio.git</code></pre>
+    <p>Isso copia o projeto do GitHub pro seu PC.</p>
+  </div>
+
+  <div id="versao" class="tab">
+    <h2>Como fazer um commit</h2>
+    <p>Depois de mudar arquivos, use:</p>
+    <pre><code>git add .</code></pre>
+    <pre><code>git commit -m "Explique o que fez"</code></pre>
+    <p>Pronto, isso salva uma versão do projeto.</p>
+  </div>
+
+  <div id="enviar" class="tab">
+    <h2>Como enviar pro GitHub (push)</h2>
+    <p>Depois do commit, envie pro GitHub com:</p>
+    <pre><code>git push origin main</code></pre>
+    <p>Agora seu código está online.</p>
+  </div>
+
+</div>
+
+<footer>
+  Criado por Beatriz Cardoso da Silva dos Santos
+</footer>
+
+<script>
+function showTab(id) {
+  const tabs = document.querySelectorAll('.tab');
+  const buttons = document.querySelectorAll('nav button');
+
+  tabs.forEach(tab => tab.classList.remove('active'));
+  buttons.forEach(btn => btn.classList.remove('active'));
+
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
